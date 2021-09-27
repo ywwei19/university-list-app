@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 import Backdrop from '@mui/material/Backdrop';
@@ -60,7 +60,7 @@ const SubscribedData = () => {
             field: 'results', headerName: 'Result', width: 300,
             renderCell: (params) => {
                 const url = `http://universities.hipolabs.com/search?name=${params.row.uniName}&country=${params.row.country}`
-                return (<a href={url} rel="noreferrer" target="_blank">Link</a>)
+                return (<a href={url} target="_blank">Link</a>)
             }
         }
     ];
